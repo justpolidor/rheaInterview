@@ -24,6 +24,8 @@ after we calculated all the results (and we streamed them over the channel), we 
 
 The unit test that I have written checks the first 15 resuls. If the array with the results are the same of the results from the channel, the test pass. 
 
+Benchmark: `BenchmarkFizzBuzz         10000000 (times executed)             3215 ns/op            1937 B/op          8 allocs/op`
+
 ## Milestone 2
 
 _If the numbers 1 to 5 are written out in words: "one", "two", "three", "four", "five", then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total to spell out the words._
@@ -38,3 +40,11 @@ The basic principle is to divide the number into dozens and units (using module 
 After we computed all the 999 numbers, we add the length of _ONETHOUSAND_ (beacuse it is the last number, we just add it without going again under the `computeNumber(number int, and bool) int` function.
 
 Note that the test file checks both _and_ cases (with _and_ true and with _and_ false)
+
+
+## Legend ##
+
+* Times executed =  is the number of iterations for i := 0; i < b.N; i++
+* ns/op =  is approximate time it took for one iteration to complete
+* b/op =  how many bytes were allocated per op.
+* allocs/op = means how many distinct memory allocations occurred per op (single iteration).
